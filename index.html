@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+  
+  <!-- <section class="hero-section">
+    <div class="hero-section-container">
+    
+        <input type="radio" id="trigger1" name="slider">
+        <label for="trigger1"><span class="sr-only">Slide 1 of 5. A photo of a mountain pass with a winding path along the river and a view of distant mountains hiding in the mist.</span></label>
+        <div class="slide bg1 bg">
+          <img src="seventh-left.jpg" alt="">
+        </div>
+
+        <input type="radio" id="trigger2" name="slider" checked autofocus>
+        <label for="trigger2"><span class="sr-only">Slide 2 of 5. A photo of a bird eating sunflower seeds from an open hand.</span></label>
+        <div class="slide bg2 bg">
+          <img src="seventh-middle-1.jpg" alt="">
+        </div>
+
+        <input type="radio" id="trigger3" name="slider">
+        <label for="trigger3"><span class="sr-only">Slide 3 of 5. A photo of a concrete bridge over the river with high voltage power lines on both banks.</span></label>
+        <div class="slide bg3 bg">
+          <img src="seventh-middle-2.jpg" alt="">
+        </div>
+
+        <input type="radio" id="trigger3" name="slider">
+        <label for="trigger3"><span class="sr-only">Slide 3 of 5. A photo of a concrete bridge over the river with high voltage power lines on both banks.</span></label>
+        <div class="slide bg4 bg">
+          <img src="seventh-middle-3.jpg" alt="">
+        </div>
+
+        <input type="radio" id="trigger3" name="slider">
+        <label for="trigger3"><span class="sr-only">Slide 3 of 5. A photo of a concrete bridge over the river with high voltage power lines on both banks.</span></label>
+        <div class="slide bg5 bg">
+          <img src="seventh-right.jpg" alt="">
+        </div>
+    </div>
+</section> -->
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<style>
+  .swiper {
+    width: 70%;
+  }
+    .sample-slider{
+      padding-right: 200px;
+      border: 1px solid red;
+        width: 65%;
+
+        /* box-shadow: inset 5px 5px 5px black; */
+
+
+        
+      mask-image: linear-gradient(transparent,
+          black 20%,
+          black 80%,
+          transparent 100%);
+      -webkit-mask-image: linear-gradient( to right,transparent,
+          black 20%,
+          black 80%,
+          transparent 100%);
+
+     
+
+
+    }
+    .sample-slider img{
+      background-color: greenyellow;
+        width: 40%;
+         
+
+    }
+    .card-title {
+  font-family: var(--ff-main);
+  font-size: 1vw;
+}
+
+.card-text {
+  font-family: var(--ff-main);
+  font-size: .8vw;
+  font-weight: bold;
+}
+
+span {
+  text-decoration: line-through;
+}
+
+</style>
+
+    <div class="swiper sample-slider">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="seventh-left.jpg">
+            <div>
+              <h5 class="card-title">Small Leather Bag</h5>
+              <p class="card-text">$96.64 - $115.02</p>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="seventh-middle-1.jpg">
+            <h5 class="card-title">Ergonomic Leather</h5>
+              <p class="card-text">$27.82 - $758.49</p>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="seventh-middle-2.jpg">
+            <h5 class="card-title">Synergistic Granite Chair</h5>
+              <p class="card-text">$430.25</p>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="seventh-middle-3.jpg">
+            <h5 class="card-title">Practical Concrete Keyboard</h5>
+              <p class="card-text">$217.87 <span>$754.13</span></p>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="seventh-right.jpg">
+            <h5 class="card-title">Practical Glass Chair</h5>
+              <p class="card-text">$96.64 <span>$120.60</span></p>
+          </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
+  </div>
+
+
+<script>
+    const swiper = new Swiper('.sample-slider', {
+        loop: true,                         //loop
+        slidesPerView: 3,                   //number of slides to show
+        centeredSlides : true,              //put acctive slide center
+        spaceBetween: -370,                   //space between slides
+        autoplay: {                         //autoplay
+            delay: 1600,  
+        },   
+        
+        pagination: {                       //pagination（dots）
+            el: '.swiper-pagination',
+        },
+        navigation: {                       //navigation（arrows）
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    })
+</script>
+
+
+  <script src="main.js"></script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
